@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body{
+            background-color: rgb(60, 48, 193);
+            color: white;
+        }
+        
+        h2{
+            text-align: center;
+            color: white;
+        }
+
+        main{
+            position: relative;
+            background-color: rgb(14, 2, 92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 360px;
+            width: 300px;
+            padding: 10px;
+            margin: 12.5% auto;
+            flex-direction: column;
+        }
+        .prop{
+            display: flex;
+            justify-content: space-between;
+        }
+        .result-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 270px;
+            background-color: rgb(21, 1, 72); 
+            border: none; 
+            height: 20px; 
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        button{
+            background-color: rgb(60, 48, 193);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+           
+            
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(43, 7, 134);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Password Generator</h2>
+        <div>
+          <div class="result-container">
+            <span id="result"></span>
+            <button type="button" id="copy" style="position: absolute; right: 18px;">Copy</button>
+          </div>
+          <div class="prop">
+            <label for="length">Password Length</label>
+            <input type="number" name="length" id="length" min="8" max="128" required>
+          </div>
+            <br>
+          <div class="prop">
+            <label for="uppercase">Include Uppercase Letters</label>
+            <input type="checkbox" name="uppercase" id="uppercase">
+          </div>
+            <br>
+          <div class="prop">
+            <label for="lowercase">Include Lowercase Letters</label>
+            <input type="checkbox" name="lowercase" id="lowercase">
+          </div>
+            <br>
+          <div class="prop">
+            <label for="numbers">Include Numbers</label>
+            <input type="checkbox" name="numbers" id="numbers">
+          </div>
+            <br>
+          <div class="prop">
+            <label for="symbols">Include Symbols</label>
+            <input type="checkbox" name="symbols" id="symbols">
+          </div>
+            <br>
+            <button type="submit" style="width: 290px;" id="generate">Generate Password</button>
+        </div>
+    </main>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
